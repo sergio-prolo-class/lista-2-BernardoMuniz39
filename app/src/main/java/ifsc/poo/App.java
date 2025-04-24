@@ -13,8 +13,18 @@ public class App {
         this.draw.setCanvasSize(1000, 600);
         this.draw.setXscale(0,1000);
         this.draw.setYscale(0,600);
-        Grade grade = new Grade(40,40);
+
+
+        Grade grade = new Grade(10,5);
+        Grade grade2 = new Grade(550,5);
+        Navio navio = new Navio();
+        navio.desenhar(0, 0, 4, "Horizontal", grade, draw);
+        navio.desenhar(8, 1, 2, "Horizontal", grade, draw);
+        navio.desenhar(2, 3, 5, "Vertical", grade, draw);
+        navio.desenhar(1, 5, 3, "Vertical", grade, draw);
+        navio.desenhar(5, 7, 3, "Vertical", grade, draw);
         grade.desenhar(draw);
+        grade2.desenhar(draw);
 
     }
 
