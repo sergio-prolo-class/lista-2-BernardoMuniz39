@@ -13,7 +13,7 @@ public class App {
         this.draw.setCanvasSize(1000, 600);
         this.draw.setXscale(0,1000);
         this.draw.setYscale(0,600);
-        Grade grade = new Grade();
+        Grade grade = new Grade(40,40);
         grade.desenhar(draw);
 
     }
