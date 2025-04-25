@@ -8,6 +8,7 @@ public class Navio {
     public void desenhar(int coluna, int linha, int quantidade, String orientacao, Grade grade, Draw draw){
         draw.setPenColor(Color .RED);
 
+        
         //Verificação básica para não ter quadrados fora do tabuleiro
         if(quantidade + coluna > 10 || quantidade + linha > 10){
             System.out.println("Posição inválida!");
