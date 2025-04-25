@@ -5,7 +5,7 @@ package ifsc.poo;
 import edu.princeton.cs.algs4.Draw;
 
 public class App {
-    edu.princeton.cs.algs4.Draw draw;
+    Draw draw;
 
     public App(){
 
