@@ -11,6 +11,10 @@ Para clonar o repositório para a sua máquina local utilizando Git, basta execu
 ### Sobre
 Este repositório tem o objetivo de apresentar a resolução da lista 2 da disciplina de Programação orientada a objetos. Durante a realização do projeto, foi utilizada a biblioteca **algs4** para desenhar os tabuleiros em questão.
 
+Para utilizar o projeto, certifique-se de estar dentro da pasta clonada e com o gradle instalado no seu computador. Digite o seguinte comando no terminal da sua máquina local:
+
+`gradle run` ou `./gradlew run`
+
 Fique a vontade para imprimir novos tabuleiros, navios e desenhar conforme sua curiosidade!
 
 ### Classe Grade
@@ -27,7 +31,7 @@ Abaixo está a descrição de cada método do classe Grade:
 - setPixel(): Define o tamanho de cada quadrado do tabuleiro;
 - desenhar(): Desenha um novo tabuleiro na tela;
 - getPosX(): Retorna a posição X do tabuleiro dentro da tela;
-- getPosX(): Retorna a posição Y do tabuleiro dentro da tela;
+- getPosY(): Retorna a posição Y do tabuleiro dentro da tela;
 - getPixel(): Retorna o pixel dos quadrados presentes no tabuleiro; 
 
 
