@@ -4,39 +4,46 @@ import java.awt.Color;
 import edu.princeton.cs.algs4.Draw;
 
 public class Navio {
-   
-    public void desenhar(int linha, int coluna, int quantidade, String orientacao, Grade grade, Draw draw){
+    
+    public void desenhar(int coluna, int linha, int quantidade, String orientacao, Grade grade, Draw draw){
         draw.setPenColor(Color .RED);
 
+        //Verificação básica para não ter quadrados fora do tabuleiro
+        if(quantidade + coluna > 10 || quantidade + linha > 10){
+            System.out.println("Posição inválida!");
+            System.exit(1);
+        }
 
-        if(orientacao.equals("Horizontal")){
+        switch(orientacao){
+            case "Horizontal"->{
 
-          
-            for(int i =0; i < quantidade; i++){
-                int x = 40 + coluna * grade.getPixel() + grade.getPosX();
-                int y = 45 + linha * grade.getPixel() + grade.getPosY();
-                draw.filledSquare(x, y, grade.getPixel()/2);
-                coluna++;
-            }
-        
-        }else if(orientacao.equals("Vertical")){
+                //Pinta os quadrados na horizontal imcrementando o numero de colunas
 
-            
-
-            for(int i =0; i < quantidade; i++){
-                int x = 40 + coluna * grade.getPixel() + grade.getPosX();
-                int y = 45 + linha * grade.getPixel() + grade.getPosY();
-                draw.filledSquare(x, y, grade.getPixel()/2);
-                linha++;
+                for(int i =0; i < quantidade; i++){
+                    int x = 40 + coluna * grade.getPixel() + grade.getPosX();
+                    int y = 45 + linha * grade.getPixel() + grade.getPosY();
+                    draw.filledSquare(x, y, grade.getPixel()/2);
+                    coluna++;
+                }
             }
 
-        }else{
-            System.out.println("Orientação inválida!");
-        }
             
-    
-    
+            case "Vertical"->{
+
+                //Pinta os quadrados na vertical imcrementando o numero de linhas
+                for(int i =0; i < quantidade; i++){
+                    int x = 40 + coluna * grade.getPixel() + grade.getPosX();
+                    int y = 45 + linha * grade.getPixel() + grade.getPosY();
+                    draw.filledSquare(x, y, grade.getPixel()/2);
+                    linha++;
+                }
+            }
+            default->{
+                System.out.println("Orientação inválida!");
+                System.exit(1);
+            }
         }
+    }
       
         
     }

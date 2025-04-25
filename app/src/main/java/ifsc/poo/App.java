@@ -8,23 +8,31 @@ public class App {
     edu.princeton.cs.algs4.Draw draw;
 
     public App(){
+
+        //Atribuindo draw basico com as posições indicadas
         this.draw = new Draw();
         this.draw.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
         this.draw.setCanvasSize(1000, 600);
         this.draw.setXscale(0,1000);
         this.draw.setYscale(0,600);
 
-
-        Grade grade = new Grade(10,5);
-        Grade grade2 = new Grade(550,5);
+        //Iniciando os tabuleiros nas posições esquerda e direita
+        Grade tabuleiro = new Grade(10,5);
+        Grade tabuleiro2 = new Grade(550,5);
         Navio navio = new Navio();
-        navio.desenhar(0, 0, 4, "Horizontal", grade, draw);
-        navio.desenhar(8, 1, 2, "Horizontal", grade, draw);
-        navio.desenhar(2, 3, 5, "Vertical", grade, draw);
-        navio.desenhar(1, 5, 3, "Vertical", grade, draw);
-        navio.desenhar(5, 7, 3, "Vertical", grade, draw);
-        grade.desenhar(draw);
-        grade2.desenhar(draw);
+
+        //Atribuindo os pixels de cada tabuleiro
+        tabuleiro.setPixel(40);
+        tabuleiro2.setPixel(40);
+
+        //Desenhando no tabuleiro principal as posições inidicadas
+        navio.desenhar(0, 0, 4, "Horizontal", tabuleiro, draw);
+        navio.desenhar(1, 8, 2, "Horizontal", tabuleiro, draw);
+        navio.desenhar(3, 2, 5, "Vertical", tabuleiro, draw);
+        navio.desenhar(5, 1, 3, "Vertical", tabuleiro, draw);
+        navio.desenhar(7, 5, 3, "Vertical", tabuleiro, draw);
+        tabuleiro.desenhar(draw);
+        tabuleiro2.desenhar(draw);
 
     }
 
