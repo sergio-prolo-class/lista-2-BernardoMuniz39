@@ -14,7 +14,7 @@ public class Navio {
             this.coluna = coluna;
         }else{
             System.out.println("Linha ou coluna inválida!");
-            System.exit(1);
+            System.exit(0);
         }
     }
 
@@ -23,7 +23,7 @@ public class Navio {
             this.quantidade = qtd;
         }else{
             System.out.println("Quantidade de navios inválida!");
-            System.exit(1);
+            System.exit(0);
         }
     }
 
@@ -33,7 +33,7 @@ public class Navio {
             this.orientacao = orientacao;
         }else{
            System.out.println("Orientação inválida!");
-           System.exit(1);
+           System.exit(0);
         }
     }
 
@@ -49,7 +49,7 @@ public class Navio {
         //Verificação básica para não ter quadrados fora do tabuleiro
         if(quantidade + coluna > tamLinhasColunas || quantidade + linha > tamLinhasColunas){
             System.out.println("Posição inválida!");
-            System.exit(1);
+            System.exit(0);
         }
 
         switch(this.orientacao){
