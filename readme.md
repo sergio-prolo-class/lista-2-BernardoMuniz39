@@ -15,6 +15,8 @@ Para utilizar o projeto, certifique-se de estar dentro da pasta clonada e com o 
 
 `gradle run` ou `./gradlew run`
 
+OBS: Caso após a execução do comando acima aparecer um aviso de permissão negada, basta executar o comando: `chmod +x gradlew` e digitar e utilizar novamente o projeto com `./gradlew run`.
+
 Fique a vontade para imprimir novos tabuleiros, navios e desenhar conforme sua curiosidade!
 
 ### Classe Grade
